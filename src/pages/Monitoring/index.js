@@ -30,23 +30,24 @@ const Monitoring = () => {
     });
 
     return (
-        <div className="bg-gray-300 p-2 w-full flex flex-col space-y-[20px]">
+        <div className="bg-gray-100 p-2 w-full flex flex-col space-y-[20px]">
             <div className="flex space-x-[20px]">
-                <DetailTile
-                    header="Currently up for"
-                    content="12 days 20 hours 12 mins"
-                />
-                <DetailTile
-                    header="Last checked at"
-                    content="47 seconds ago"
-                />
-                <DetailTile
-                    header="Incidents"
-                    content="13"
-                />
+                <DetailTile>
+                    <div className="">Currently up for</div>
+                    <div className="font-bold text-[20px]">12 days 20 hours 12 mins</div>
+                </DetailTile>
+                <DetailTile>    
+                    <div className="">Last checked at</div>
+                    <div className="font-bold text-[20px]">47 seconds ago</div>
+                </DetailTile>
+                <DetailTile>
+                    <div className="">Incidents</div>
+                    <div className="font-bold text-[20px]">13</div>
+                </DetailTile>
             </div>
-            
-            <ResponseView data={chartData} />
+            <DetailTile>
+                <ResponseView data={chartData} />
+            </DetailTile>
             <DataTable />
         </div>
     )

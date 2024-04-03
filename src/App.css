@@ -4,7 +4,7 @@
 
 .navbar {
   width: 100%;
-  background-color: lightgray;
+  background-color: #eeeeee;
   display: flex;
 
 }
@@ -15,9 +15,17 @@
 }
 
 .navbar-item:hover {
-  border-bottom: 1px solid darkgray;
+  border-bottom: 2px solid darkgray;
 }
 
 .navbar-item.active {
-  border-bottom: 1px solid darkblue;
+  border-bottom: 2px solid darkblue;
+}
+
+table th, td {
+  padding: 1rem;
+}
+
+table tr {
+  border: 1px solid lightgray;
 }
