@@ -15,11 +15,8 @@ const Header = () => {
             <Link to='/'>
                 <div className={`navbar-item p-2 ${activePath === "" && 'active'}`}> Dashboard </div>
             </Link>
-            <Link to='/monitoring' >
-                <div className={`navbar-item p-2 ${activePath === "monitoring" && 'active'}`}> Monitoring </div>
-            </Link>
-            <Link to='/documents'>
-                <div className={`navbar-item p-2 ${activePath === "documents" && 'active'}`}> Documents </div>
+            <Link to='/map1' >
+                <div className={`navbar-item p-2 ${activePath === "monitoring" && 'active'}`}> Map 1 </div>
             </Link>
         </div>
     )

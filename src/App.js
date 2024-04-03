@@ -2,8 +2,8 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './pages/Layout';
 import Dashboard from './pages/Dashboard';
-import Monitoring from './pages/Monitoring';
-import Documents from './pages/Documents'
+import Map1 from './pages/Map1';
+
 
 function App() {
   return (
@@ -11,8 +11,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Dashboard />} />
-          <Route path='monitoring' element={<Monitoring />} />
-          <Route path='documents' element={<Documents />} />
+          <Route path='map1' element={<Map1 />} />
+
         </Route>
       </Routes>
     </BrowserRouter>
