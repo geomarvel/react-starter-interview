@@ -1,9 +1,12 @@
-import { CategoryScale } from "chart.js";
-import Chart from "chart.js/auto";
 
-Chart.register(CategoryScale);
 
-const Monitoring = () => {
+const Map1 = () => {
+
+  // Tile Layer:
+  // https://tile.openstreetmap.org/{z}/{x}/{y}.png
+  // GeoJson for FeatureLayer: 
+  // https://raw.githubusercontent.com/PublicaMundi/MappingAPI/master/data/geojson/us-states.json
+
   return (
     <div>
       <div> Place a leaflet map on this page.</div>
@@ -26,4 +29,4 @@ const Monitoring = () => {
   );
 };
 
-export default Monitoring;
+export default Map1;
