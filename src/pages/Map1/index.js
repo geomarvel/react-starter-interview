@@ -1,30 +1,31 @@
-
+import L from "leaflet";
+import { useEffect, useRef } from "react";
 
 const Map1 = () => {
 
-  // Tile Layer:
-  // https://tile.openstreetmap.org/{z}/{x}/{y}.png
-  // GeoJson for FeatureLayer: 
-  // https://raw.githubusercontent.com/PublicaMundi/MappingAPI/master/data/geojson/us-states.json
+  // useEffect(() => {
+
+  // })
 
   return (
     <div>
-      <div> Place a leaflet map on this page.</div>
+      <h1 className="text-xl font-bold mb-3"> Map Challenge 1</h1>
 
-    <div className="flex-1"> 
-      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 my-2 rounded">
-        +
-      </button>
+      <p className=" mb-3"> Use Vanilla Leaflet to add a map to this page. </p>
 
-      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 my-2  rounded">
-        -
-      </button>
-      </div>
-      <div> 
-      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-        Show Layers
-      </button>
-      </div>
+      <p>
+        {" "}
+        Leaflet Instructions:{" "}
+        <a
+          className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+          src="https://leafletjs.com/examples/quick-start/"
+        >
+          {" "}
+          https://leafletjs.com/examples/quick-start/
+        </a>
+      </p>
+
+      <div id="map" style={{ width: "500px", height: "500px" }} />
     </div>
   );
 };
