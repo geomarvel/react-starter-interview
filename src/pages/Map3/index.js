@@ -1,11 +1,10 @@
 import axios from "axios";
 import L, { Layer } from "leaflet";
 import { useEffect, useRef } from "react";
-import { useLayoutEffect } from "react";
+
 
 const Map3 = () => {
-  const mapRef = useRef(null);
-  const controlRef = useRef(null);
+
 
   // Tile Layer:
   // https://tile.openstreetmap.org/{z}/{x}/{y}.png
@@ -16,38 +15,9 @@ const Map3 = () => {
   // GeoJson for FeatureLayer:
   // https://raw.githubusercontent.com/PublicaMundi/MappingAPI/master/data/geojson/us-states.json
 
-  useEffect(() => {
-    if (mapRef.current == null) {
-      const _map = L.map("map").setView([51.505, -0.09], 13);
-      mapRef.current = _map;
 
-      const layer1 = L.tileLayer(
-        "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
-        {}
-      ).addTo(_map);
 
-      const layer2 = L.tileLayer(
-        "http://{s}.tile3.opencyclemap.org/landscape/{z}/{x}/{y}.png",
-        {}
-      ).addTo(_map);
 
-      var baseMaps = {
-        OpenStreetMap: layer1,
-        cycleMap: layer2,
-      };
-
-      controlRef.current = L.control.layers(baseMaps).addTo(_map);
-    }
-  }, []);
-
-  async function GET_geoJSON() {
-    const res = await axios.get(
-      "https://raw.githubusercontent.com/PublicaMundi/MappingAPI/master/data/geojson/us-states.json"
-    );
-    console.log(res.data);
-
-    L.geoJSON(res.data).addTo(mapRef.current);
-  }
 
   return (
     <div>
@@ -78,7 +48,7 @@ const Map3 = () => {
           onClick={() => {
             // NYC Lat Long: 40.737, -73.923
 
-            mapRef.current.setView([40.737, -73.923], 5);
+     
           }}
         >
           Go to US
@@ -88,7 +58,7 @@ const Map3 = () => {
         <button
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 my-2 rounded"
           onClick={() => {
-            GET_geoJSON();
+
           }}
         >
           Load and add GeoJson

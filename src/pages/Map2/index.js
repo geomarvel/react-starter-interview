@@ -3,7 +3,6 @@ import { useEffect, useRef } from "react";
 import { useLayoutEffect } from "react";
 
 const Map2 = () => {
-  const mapRef = useRef(null);
 
   // Tile Layer:
   // https://tile.openstreetmap.org/{z}/{x}/{y}.png
@@ -11,32 +10,9 @@ const Map2 = () => {
   // Tile Layer 2:
   // http://{s}.tile3.opencyclemap.org/landscape/{z}/{x}/{y}.png
 
-  // GeoJson for FeatureLayer:
-  // https://raw.githubusercontent.com/PublicaMundi/MappingAPI/master/data/geojson/us-states.json
 
-  useEffect(() => {
-    if (mapRef.current == null) {
-      const _map = L.map("map").setView([51.505, -0.09], 13);
-      mapRef.current = _map;
 
-      // const layer1 = L.tileLayer(
-      //   "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
-      //   {}
-      // ).addTo(_map);
-
-      // const layer2 = L.tileLayer(
-      //   "http://{s}.tile3.opencyclemap.org/landscape/{z}/{x}/{y}.png",
-      //   {}
-      // ).addTo(_map);
-
-      // var baseMaps = {
-      //   OpenStreetMap: layer1,
-      //   cycleMap: layer2,
-      // };
-
-      // var layerControl = L.control.layers(baseMaps).addTo(_map);
-    }
-  }, []);
+ 
 
   return (
     <div>
